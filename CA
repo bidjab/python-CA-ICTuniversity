@@ -1,0 +1,10 @@
+from openpyxl.workbook import workbook
+from openpyxl import load_workbook
+
+wb = load_workbook('employeedata.xlsx')
+ws = wb.active
+for row in ws.rows:
+    row[2].value
+    Abd = row[2].value
+    row[3].value = Abd.replace("@helpinghand.cm","@handsinhands.org")
+wb.save('newemployeedata.xlsx')
